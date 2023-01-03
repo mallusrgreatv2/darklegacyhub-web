@@ -22,7 +22,7 @@ p {
 }
 
 .features-display {
-  margin-top: 420px !important;
+  margin-top: 450px !important;
   margin: 100px;
 }
 .feature {
@@ -31,11 +31,6 @@ p {
 @media (max-width: 425px) {
   .features-display {
     margin: 15px;
-  }
-}
-@media (min-width: 1440px) {
-  .features-display {
-    margin-top: 600px;
   }
 }
 .navbar-custom {
@@ -56,4 +51,15 @@ p {
   .hidden {
     transition: none;
   }
+}
+.clippy {
+  filter: invert(81%) sepia(37%) saturate(276%) hue-rotate(1deg)
+    brightness(107%) contrast(83%);
+}
+a {
+  text-decoration: none !important;
+  transition: all 1s ease-in-out;
+}
+a:hover {
+  color: var(--color6) !important;
 }

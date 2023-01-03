@@ -7,18 +7,17 @@
     <title>DarkLegacyHub</title>
     <link rel="stylesheet" href="resources/css/all.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="./resources/css/cdn/bootstrap5-3-0.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="./resources/js/cdn/bootstrap5-3-0.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <link rel="stylesheet" href="resources/css/index.css" />
+    <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="stylesheet" href="./resources/css/cdn/primer.css" />
     <script src="./resources/js/index.js" type="module" defer></script>
     <script src="./resources/js/scrolling.js" defer></script>
   </head>
@@ -62,6 +61,20 @@
         <div class="d-flex">
           <ul class="navbar-nav">
             <div class="flex">
+              <button
+                class="bg-transparent border-0 clip"
+                data-clipboard-text="dlh.kozow.com"
+                onclick="this.setAttribute('class', 'tooltipped tooltipped-s bg-transparent border-0 clip');this.setAttribute('aria-label', 'Copied to clipboard');"
+              >
+                <span class="navbar-text text-light">dlh.korow.com</span>
+                <img
+                  src="https://clipboardjs.com/assets/images/clippy.svg"
+                  alt="clippy"
+                  class="clippy"
+                  width="15"
+                />
+              </button>
+
               <span class="navbar-text text-light">Players: </span>
               <span class="navbar-text text-light" id="player-count">0</span>
               <span class="navbar-text text-light">/</span>
@@ -111,5 +124,12 @@
         </div>
       </div>
     </div>
+    <script src="./resources/js/cdn/clipboard.js"></script>
+    <script>
+      var clipboard = new ClipboardJS(".clip");
+      clipboard.on("error", () =>
+        console.error("Error while copying to clipboard...")
+      );
+    </script>
   </body>
 </html>

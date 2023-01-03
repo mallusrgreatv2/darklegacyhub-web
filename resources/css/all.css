@@ -1,5 +1,5 @@
-@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("./cdn/reset.css");
+@import url("./fonts/poppins.css");
 body {
   width: 100%;
 }

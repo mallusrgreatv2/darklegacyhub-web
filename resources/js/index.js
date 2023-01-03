@@ -1,4 +1,5 @@
 import axios from "./cdn/axios.js";
+import "./cdn/jquery.js";
 const plrCountShow = document.querySelector("#player-count");
 const maxPlrCountShow = document.querySelector("#max-plr-count");
 (async () => {
@@ -8,10 +9,9 @@ const maxPlrCountShow = document.querySelector("#max-plr-count");
   });
   const playerNumber = res.players.online;
   const maxPlayers = res.players.max;
-    maxPlrCountShow.innerHTML = maxPlayers;
-    console.log(Number(plrCountShow.innerHTML))
-    console.log(playerNumber)
-    while (Number(plrCountShow.innerHTML) < playerNumber) {
-        plrCountShow.innerHTML = Number(plrCountShow.innerHTML)++;
+  maxPlrCountShow.innerHTML = maxPlayers;
+  const num = Number(plrCountShow.innerHTML);
+  while (num < playerNumber) {
+    plrCountShow.innerHTML = num++;
   }
 })();
