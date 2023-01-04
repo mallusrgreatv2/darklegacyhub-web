@@ -68,10 +68,6 @@ a {
 a:hover {
   color: var(--color6) !important;
 }
-.topg {
-  padding: 20px;
-  border: 1px solid #ccc;
-}
 
 /* Style the h1 and h2 elements */
 .voting-display h1,
@@ -96,4 +92,15 @@ a:hover {
   .voting-display img {
     width: 100%;
   }
+}
+img[data-topg] {
+  width: 325px;
+}
+.btn {
+  font-size: 32px !important;
+  height: 65px;
+  transition: all 0.3s ease-in-out !important;
+}
+.btn:hover {
+  color: var(--color3) !important;
 }
